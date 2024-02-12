@@ -1,0 +1,161 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+
+  background-color:#bda6f7;
+  user-select:none;
+  
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    filter: grayscale(0%);
+  }
+  50% {
+    transform: scale(1.4);
+    color:rgba(143,0,225,1);
+    filter: grayscale(0%);
+    
+  }
+  100% {
+    transform: scale(1);
+    color:#fc03a9;
+    filter: grayscale(0%);
+  }
+}
+
+
+
+
+#head{
+  text-align:center;
+  position:absolute;
+  margin:4px;
+  top:20px;
+  animation-name:shake;
+  animation:heartbeat 1.5s ease infinite;
+  color:#fc03a9;
+  text-shadow:0px 0px 10px white
+}
+
+
+
+.main{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  
+  
+}
+/*63 
+36*/
+.game-box{
+  border:solid 1px white;
+  height:33.5%;
+  width:65%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  box-shadow:0px 0px 20px #a300f5;
+  background-color:rgba(143,0,225,1);
+  border-radius:4%;
+  position:absolute;
+  top:140px;
+  padding:2px
+  /*animation:heartbeat 1.5s ease;*/
+  
+}
+
+.tic-tac-box{
+  height:29.5%;
+  width:32%;
+  border:solid 1px black;
+  margin:0.3%;
+  box-shadow:inset 0px 0px 16px #c88ef5;
+  background-color:white;
+  border-radius:10%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:150px;
+  font-family:monospace;
+  padding-bottom:2%;
+  text-shadow:0px 0px 12px rgba(143,0,225,0.5);
+
+  
+}
+
+
+.winning-box{
+  border:solid 1px white;
+  height:24.5%;
+  width:96%;
+  background-color:white;
+  z-index:3;
+  box-shadow:inset 0px 0px 16px #c88ef5;
+  position:absolute;
+  bottom:2%;
+  border-radius:15%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:rgba(143,0,225,0.8);
+  gap:-10px
+    
+}
+
+.restart{
+  height:80px;
+  width:80px;
+  background-color:#a640ff;
+  margin:5px;
+  border-radius:3px;
+  color:white;
+  box-shadow: 0px 0px 16px #000000;
+  
+}
+
+.w{
+  display:none
+}
+
+
+
+@media only screen and (max-width: 767px){
+  .game-box{
+    height:49.5%;
+    width:96%;
+  }
+
+  
+
+  .tic-tac-box{
+    font-size:90px
+  }
+
+  
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .game-box{
+    height:46%;
+    width:26%;
+  }
+  .winning-box{
+    width:26%
+  }
+
+  .tic-tac-box{
+    font-size:75px
+  }
+
+  
+}
+
