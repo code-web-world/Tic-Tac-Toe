@@ -91,6 +91,12 @@ body{
   
 }
 
+.tic-tac-box:active{
+  background-color:#d5c4ff;
+  box-shadow:inset 0px 0px 16px #c88ef5;
+  
+}
+
 
 .winning-box{
   border:solid 1px white;
@@ -120,6 +126,8 @@ body{
   box-shadow: 0px 0px 16px #000000;
   
 }
+
+
 
 .w{
   display:none
